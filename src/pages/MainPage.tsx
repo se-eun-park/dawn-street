@@ -36,14 +36,14 @@ const MainPage = () => {
         </header>
         <button
           onClick={handleOnClick}
-          className={`border-text-gray text-text-gray hover:bg-point-darkpurple/30 z-20 h-16 w-40 rounded-full border text-lg font-medium transition-all duration-200 hover:text-white sm:h-18 sm:w-48 sm:text-xl md:h-20 md:w-56 md:text-2xl lg:h-22 lg:w-64 lg:text-3xl xl:h-24 xl:w-sm xl:text-4xl ${isClicked ? 'opacity-0' : 'cursor-pointer opacity-100'}`}
+          className={`border-text-gray text-text-gray hover:bg-point-darkpurple/30 z-20 h-16 w-40 rounded-full border text-lg font-medium transition-all duration-200 hover:text-white sm:h-18 sm:w-48 sm:text-xl md:h-20 md:w-56 md:text-2xl lg:h-22 lg:w-64 lg:text-3xl xl:h-24 xl:w-xs xl:text-3xl 2xl:h-20 2xl:w-56 2xl:text-2xl ${isClicked ? 'opacity-0' : 'cursor-pointer opacity-100'}`}
         >
           우리의 여정
         </button>
       </div>
 
       {isClicked && (
-        <div className='bg-gradient-linear-sunset animate-slide-up absolute bottom-16 left-1/2 z-10 aspect-square w-32 -translate-x-1/2 -translate-y-1/2 rounded-full sm:bottom-18 sm:w-36 md:bottom-20 md:w-40 lg:w-48 xl:w-2xs' />
+        <div className='bg-gradient-linear-sunset animate-slide-up absolute bottom-16 left-1/2 z-10 aspect-square w-32 -translate-x-1/2 -translate-y-1/2 rounded-full sm:bottom-18 sm:w-36 md:bottom-20 md:w-40 lg:w-48 xl:w-52' />
       )}
 
       <LottieComponent
