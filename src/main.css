@@ -4,6 +4,14 @@
 @theme {
   /* font */
   --font-paperlogy: 'Paperlogy';
+
+  /* color */
+  --color-bg-darkgray: #141620;
+
+  --color-point-darkpurple: #404060;
+
+  --color-text-white: #ffffff;
+  --color-text-gray: #5a5b62;
 }
 
 @layer base {
