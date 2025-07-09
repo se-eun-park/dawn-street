@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import LottieComponent from '@/components/common/LottieComponent'
 import Star from '@/assets/lottie/Star.json'
+import cityImage from '@/assets/png/city.png'
 
 const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false)
@@ -53,7 +54,7 @@ const MainPage = () => {
       />
 
       <img
-        src='./src/assets/png/city.png'
+        src={cityImage}
         alt='city image'
         className={`absolute bottom-12.5 z-10 w-full transition-all duration-300 ${isClicked ? 'brightness-100' : 'brightness-20'}`}
       />

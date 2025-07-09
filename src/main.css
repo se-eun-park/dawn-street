@@ -65,4 +65,8 @@
   html {
     font-family: var(--font-paperlogy);
   }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
