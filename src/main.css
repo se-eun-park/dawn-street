@@ -13,6 +13,52 @@
 
   --color-text-white: #ffffff;
   --color-text-gray: #5a5b62;
+
+  /* gradient */
+  --gradient-radial: radial-gradient(
+    circle at 50% 160%,
+    #c991a6 40%,
+    #966b88 50%,
+    #614c6b 63%,
+    #3e3956 75%,
+    #1d212f 100%
+  );
+
+  --gradient-linear: linear-gradient(
+    to top,
+    oklch(0.25 0.02 270) 0%,
+    oklch(0.4 0.08 330) 75%,
+    oklch(0.4 0.08 330 / 0.2) 100%
+  );
+
+  --gradient-linear-sunset: linear-gradient(to bottom, #f8eed8 0%, #f1e0c9 50%, #c991a6 100%);
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: var(--gradient-radial);
+  }
+
+  .bg-gradient-linear {
+    background-image: var(--gradient-linear);
+  }
+
+  .bg-gradient-linear-sunset {
+    background-image: var(--gradient-linear-sunset);
+  }
+
+  .animate-slide-up {
+    animation: slide-up 300ms ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
 }
 
 @layer base {
