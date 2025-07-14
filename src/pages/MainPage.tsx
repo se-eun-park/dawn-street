@@ -94,11 +94,11 @@ const MainPage = () => {
       gsap.fromTo(
         sunsetRef.current,
         {
-          y: 300,
+          y: 350,
           opacity: 0.5,
         },
         {
-          y: -100,
+          y: -50,
           opacity: 1,
           duration: 1,
           ease: 'none',
@@ -161,7 +161,6 @@ const MainPage = () => {
             ref={headerRef}
             className='z-20 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6'
           >
-
             <h1 className='flex flex-col items-center gap-2 sm:flex-row sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20'>
               <span className='text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
                 D A W N
@@ -177,7 +176,7 @@ const MainPage = () => {
         </div>
         <div
           ref={sunsetRef}
-          className='bg-gradient-linear-sunset absolute bottom-16 left-1/2 z-10 aspect-square w-32 -translate-x-1/2 -translate-y-1/2 rounded-full sm:bottom-18 md:bottom-20 md:w-36 lg:w-40 xl:w-40'
+          className='bg-gradient-linear-sunset absolute bottom-16 left-1/2 z-10 aspect-square w-28 -translate-x-1/2 -translate-y-1/2 rounded-full sm:bottom-18 md:bottom-20 md:w-36 lg:w-42 xl:w-48'
         />
 
         <LottieComponent
@@ -195,11 +194,11 @@ const MainPage = () => {
           ref={cityRef}
           src={cityImage}
           alt='city image'
-          className='absolute bottom-10 z-10 w-full transition-all duration-300 sm:bottom-12 md:bottom-14 lg:bottom-16 xl:bottom-12.5'
+          className='absolute bottom-10 z-10 w-full sm:bottom-12 md:bottom-14 lg:bottom-16 xl:bottom-12.5'
         />
         <div
           ref={gradientBarRef}
-          className='absolute bottom-0 z-10 h-10 w-full transition-all duration-300 sm:h-12 md:h-14 lg:h-16 xl:h-15'
+          className='absolute bottom-0 z-10 h-10 w-full sm:h-12 md:h-14 lg:h-16 xl:h-15'
         />
       </div>
     </section>
