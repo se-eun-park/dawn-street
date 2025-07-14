@@ -1,4 +1,4 @@
-import { MainPage, ProjectPage } from '@/pages'
+import { MainPage } from '@/pages'
 
 const BaseLayout = () => {
   return (
