@@ -161,6 +161,7 @@ const MainPage = () => {
             ref={headerRef}
             className='z-20 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6'
           >
+
             <h1 className='flex flex-col items-center gap-2 sm:flex-row sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20'>
               <span className='text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
                 D A W N
