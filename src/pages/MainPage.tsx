@@ -194,11 +194,11 @@ const MainPage = () => {
           ref={cityRef}
           src={cityImage}
           alt='city image'
-          className='absolute bottom-10 z-10 w-full transition-all duration-300 sm:bottom-12 md:bottom-14 lg:bottom-16 xl:bottom-12.5'
+          className='absolute bottom-10 z-10 w-full sm:bottom-12 md:bottom-14 lg:bottom-16 xl:bottom-12.5'
         />
         <div
           ref={gradientBarRef}
-          className='absolute bottom-0 z-10 h-10 w-full transition-all duration-300 sm:h-12 md:h-14 lg:h-16 xl:h-15'
+          className='absolute bottom-0 z-10 h-10 w-full sm:h-12 md:h-14 lg:h-16 xl:h-15'
         />
       </div>
     </section>
