@@ -1,8 +1,8 @@
 const ProjectPage = () => {
   return (
-    <div>
+    <section className='h-screen'>
       <h1>ProjectPage</h1>
-    </div>
+    </section>
   )
 }
 

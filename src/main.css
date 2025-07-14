@@ -64,9 +64,6 @@
 @layer base {
   html {
     font-family: var(--font-paperlogy);
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
+    scroll-behavior: smooth;
   }
 }
