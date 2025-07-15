@@ -4,7 +4,8 @@ const MainPage = () => {
   return (
     <div className='bg-bg-black-100'>
       <section className='flex h-screen w-full flex-col items-center px-12'>
-        <div className='flex flex-col items-center justify-center gap-16'>
+        <div className='flex flex-col items-center'>
+          <SunriseAnimation />
           <div className='flex flex-col items-center justify-center gap-16 px-6 pt-16 sm:gap-20 sm:pt-20 md:gap-28 md:pt-24 lg:gap-32 lg:pt-28 xl:gap-37 xl:pt-30'>
             <header className='z-20 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
               <h1 className='text-text-white flex flex-col items-center gap-2 sm:flex-row sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20'>
@@ -20,7 +21,6 @@ const MainPage = () => {
               </h2>
             </header>
           </div>
-          <SunriseAnimation />
         </div>
       </section>
 

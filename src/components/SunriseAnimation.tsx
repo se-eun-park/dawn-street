@@ -21,8 +21,8 @@ const SunriseAnimation = () => {
       // 전체 섹션 pin 설정
       ScrollTrigger.create({
         trigger: mainRef.current,
-        start: 'top 20%',
-        end: 'bottom 30%',
+        start: 'top 10%',
+        end: 'bottom 10%',
         pin: true,
         pinSpacing: true,
       })
@@ -41,8 +41,8 @@ const SunriseAnimation = () => {
           ease: 'none',
           scrollTrigger: {
             trigger: mainRef.current,
-            start: 'top 20%',
-            end: 'bottom 30%',
+            start: 'top 10%',
+            end: 'bottom 10%',
             scrub: true,
           },
         },
@@ -53,7 +53,7 @@ const SunriseAnimation = () => {
         sunsetRef.current,
         {
           y: 130,
-          opacity: 0,
+          opacity: 0.5,
         },
         {
           y: 20,
@@ -62,8 +62,8 @@ const SunriseAnimation = () => {
           ease: 'none',
           scrollTrigger: {
             trigger: mainRef.current,
-            start: 'top 20%',
-            end: 'bottom 30%',
+            start: 'top 10%',
+            end: 'bottom 10%',
             scrub: 1,
           },
         },
@@ -81,8 +81,8 @@ const SunriseAnimation = () => {
           ease: 'none',
           scrollTrigger: {
             trigger: mainRef.current,
-            start: 'top 20%',
-            end: 'bottom 30%',
+            start: 'top 10%',
+            end: 'bottom 10%',
             scrub: true,
           },
         },
@@ -100,8 +100,8 @@ const SunriseAnimation = () => {
           ease: 'none',
           scrollTrigger: {
             trigger: mainRef.current,
-            start: 'top 20%',
-            end: 'bottom 30%',
+            start: 'top 10%',
+            end: 'bottom 10%',
             scrub: true,
           },
         },
@@ -114,7 +114,7 @@ const SunriseAnimation = () => {
   return (
     <section
       ref={mainRef}
-      className='bg-bg-darkgray relative h-[50vh] max-h-[50vh] w-[60vw] rounded-3xl'
+      className='bg-bg-darkgray relative mt-20 h-[50vh] max-h-[50vh] w-[60vw] rounded-3xl'
     >
       <div className='sticky top-0 h-full w-full'>
         <div
@@ -130,7 +130,7 @@ const SunriseAnimation = () => {
           loop={true}
           init={0}
           end={100}
-          className='absolute top-0 z-0 h-full w-full opacity-50'
+          className='absolute top-0 z-0 h-full w-full'
         />
 
         <img
