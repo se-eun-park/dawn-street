@@ -52,8 +52,8 @@ const SunriseAnimation = () => {
       gsap.fromTo(
         sunsetRef.current,
         {
-          y: 130,
-          opacity: 0.5,
+          y: 230,
+          opacity: 0,
         },
         {
           y: 20,
@@ -114,7 +114,7 @@ const SunriseAnimation = () => {
   return (
     <section
       ref={mainRef}
-      className='bg-bg-darkgray relative mt-20 h-[50vh] max-h-[50vh] w-[60vw] rounded-3xl'
+      className='bg-bg-darkgray relative h-[50vh] max-h-[50vh] w-[60vw] overflow-hidden rounded-3xl'
     >
       <div className='sticky top-0 h-full w-full'>
         <div
