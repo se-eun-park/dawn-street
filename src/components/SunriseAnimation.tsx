@@ -114,7 +114,7 @@ const SunriseAnimation = () => {
   return (
     <section
       ref={mainRef}
-      className='bg-bg-darkgray relative h-[50vh] max-h-[50vh] w-full rounded-2xl'
+      className='bg-bg-darkgray relative h-[50vh] max-h-[50vh] w-[60vw] rounded-3xl'
     >
       <div className='sticky top-0 h-full w-full'>
         <div
@@ -141,7 +141,7 @@ const SunriseAnimation = () => {
         />
         <div
           ref={gradientBarRef}
-          className='absolute bottom-0 z-10 h-5 w-full rounded-b-2xl sm:h-7 md:h-9 lg:h-11 xl:h-13'
+          className='absolute bottom-0 z-10 h-5 w-full rounded-b-3xl sm:h-7 md:h-9 lg:h-11 xl:h-13'
         />
       </div>
     </section>

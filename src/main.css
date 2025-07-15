@@ -46,3 +46,26 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('./assets/font/Pretendard/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('./assets/font/Pretendard/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('./assets/font/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
