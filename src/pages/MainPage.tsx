@@ -30,11 +30,11 @@ const MainPage = () => {
         </div>
         <div className='flex flex-col items-center justify-center gap-16 px-6 pt-16 sm:gap-20 sm:pt-20 md:gap-28 md:pt-24 lg:gap-32 lg:pt-28 xl:gap-37 xl:pt-30'>
           <header className='z-20 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
-            <h1 className='text-text-white flex flex-col items-center gap-2 sm:flex-row sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20'>
-              <span className='font-paperlogy-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
+            <h1 className='text-text-white 3xl:gap-20 flex flex-col items-center gap-2 sm:flex-row sm:gap-8 md:gap-12'>
+              <span className='font-paperlogy-800 3xl:text-8xl text-4xl sm:text-5xl md:text-6xl'>
                 D A W N
               </span>
-              <span className='font-paperlogy-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
+              <span className='font-paperlogy-800 3xl:text-8xl text-4xl sm:text-5xl md:text-6xl'>
                 S T R E E T
               </span>
             </h1>
