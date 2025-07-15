@@ -1,3 +1,6 @@
 export { default as MainPage } from './MainPage'
-export { default as ProjectPage } from './ProjectPage'
+export { default as MetricsPage } from './MetricsPage'
+export { default as ServicesPage } from './ServicesPage'
+export { default as PatentsPage } from './PatentsPage'
+export { default as PartnershipsPage } from './PartnershipsPage'
 export { default as NotFoundPage } from './NotFoundPage'

@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import { ReactLenis } from 'lenis/react'
 import { useEffect, useRef } from 'react'
-import { MainPage, ProjectPage } from '@/pages'
+import { MainPage, MetricsPage, ServicesPage, PartnershipsPage, PatentsPage } from '@/pages'
 
 const BaseLayout = () => {
   const lenisRef = useRef<any>(null)
@@ -20,7 +20,10 @@ const BaseLayout = () => {
     <main>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <MainPage />
-      <ProjectPage />
+      <MetricsPage />
+      <ServicesPage />
+      <PatentsPage />
+      <PartnershipsPage />
     </main>
   )
 }
