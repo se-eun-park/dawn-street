@@ -1,6 +1,23 @@
+import { useEffect, useState } from 'react'
 import SunriseAnimation from '@/components/SunriseAnimation'
+import ScrollDown from '@/assets/svg/ScrollDown'
 
 const MainPage = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      setIsScrolled(scrollTop > 10)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className='bg-bg-black-100'>
       <section className='flex h-screen w-full flex-col items-center px-12'>
@@ -25,6 +42,10 @@ const MainPage = () => {
       </section>
 
       <div className='bg-bg-black-100 h-[40vh]' />
+
+      {!isScrolled && (
+        <ScrollDown className='stroke-text-white/70 fixed bottom-1/10 left-1/2 z-10 w-10 -translate-x-1/2 animate-bounce transition-opacity duration-300' />
+      )}
     </div>
   )
 }
