@@ -4,6 +4,9 @@
   /* font */
   --font-paperlogy-200: 'Paperlogy-ExtraLight';
   --font-paperlogy-800: 'Paperlogy-ExtraBold';
+  --font-pretendard-400: 'Pretendard-Regular';
+  --font-pretendard-500: 'Pretendard-Medium';
+  --font-pretendard-600: 'Pretendard-SemiBold';
 
   /* color */
   --color-bg-black: #09090b;
@@ -56,7 +59,7 @@
 
 @font-face {
   font-family: 'Paperlogy-ExtraBold';
-  src: url('./assets/font/Paperlogy/Paperlogy-8ExtraBold.ttf') format('woff2');
+  src: url('./assets/font/Paperlogy/Paperlogy-8ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -64,7 +67,7 @@
 
 @font-face {
   font-family: 'Paperlogy-ExtraLight';
-  src: url('./assets/font/Paperlogy/Paperlogy-2ExtraLight.ttf') format('woff2');
+  src: url('./assets/font/Paperlogy/Paperlogy-2ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-display: swap;
   font-style: normal;
@@ -91,4 +94,5 @@
   src: url('./assets/font/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-display: swap;
+  font-style: normal;
 }
