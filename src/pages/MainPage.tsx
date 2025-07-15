@@ -23,7 +23,7 @@ const MainPage = () => {
   }, [])
 
   return (
-    <div className='bg-bg-black-100'>
+    <div className='bg-bg-black-100 w-full'>
       <section className='flex h-screen w-full flex-col items-center px-12'>
         <div className='animate-fade-in-delay-500 flex flex-col items-center'>
           <SunriseAnimation />

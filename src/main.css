@@ -3,7 +3,9 @@
 @theme {
   /* font */
   --font-paperlogy-200: 'Paperlogy-ExtraLight';
+  --font-paperlogy-300: 'Paperlogy-Light';
   --font-paperlogy-800: 'Paperlogy-ExtraBold';
+  --font-pretendard-200: 'Pretendard-ExtraLight';
   --font-pretendard-400: 'Pretendard-Regular';
   --font-pretendard-500: 'Pretendard-Medium';
   --font-pretendard-600: 'Pretendard-SemiBold';
@@ -20,6 +22,7 @@
 
   /* gradient */
   --gradient-linear-sunset: linear-gradient(to bottom, #f8eed8 0%, #f1e0c9 50%, #c991a6 100%);
+  --gradient-linear-white-purple: linear-gradient(90deg, rgb(255, 255, 255), rgb(160, 160, 255));
 
   /* animation */
   --animate-fade-in-delay-500: fade-in 0.8s ease-out 0.5s forwards;
@@ -40,6 +43,14 @@
     background-image: var(--gradient-linear-sunset);
   }
 
+  .text-gradient-linear-white-purple {
+    background-image: var(--gradient-linear-white-purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
   .animate-fade-in-delay-500 {
     animation: var(--animate-fade-in-delay-500);
     opacity: 0;
@@ -58,6 +69,22 @@
 }
 
 @font-face {
+  font-family: 'Paperlogy-ExtraLight';
+  src: url('./assets/font/Paperlogy/Paperlogy-2ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy-Light';
+  src: url('./assets/font/Paperlogy/Paperlogy-3Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Paperlogy-ExtraBold';
   src: url('./assets/font/Paperlogy/Paperlogy-8ExtraBold.ttf') format('truetype');
   font-weight: 800;
@@ -66,8 +93,8 @@
 }
 
 @font-face {
-  font-family: 'Paperlogy-ExtraLight';
-  src: url('./assets/font/Paperlogy/Paperlogy-2ExtraLight.ttf') format('truetype');
+  font-family: 'Pretendard-ExtraLight';
+  src: url('./assets/font/Pretendard/Pretendard-ExtraLight.woff2') format('woff2');
   font-weight: 200;
   font-display: swap;
   font-style: normal;
