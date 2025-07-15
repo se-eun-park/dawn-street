@@ -1,9 +1,9 @@
-@import url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy.css');
 @import 'tailwindcss';
 
 @theme {
   /* font */
-  --font-paperlogy: 'Paperlogy';
+  --font-paperlogy-200: 'Paperlogy-ExtraLight';
+  --font-paperlogy-800: 'Paperlogy-ExtraBold';
 
   /* color */
   --color-bg-black: #09090b;
@@ -16,49 +16,35 @@
   --color-text-gray: #5a5b62;
 
   /* gradient */
-  --gradient-radial: radial-gradient(
-    circle at 50% 160%,
-    #c991a6 40%,
-    #966b88 50%,
-    #614c6b 63%,
-    #3e3956 75%,
-    #1d212f 100%
-  );
-
-  --gradient-linear: linear-gradient(
-    to top,
-    oklch(0.25 0.02 270) 0%,
-    oklch(0.4 0.08 330) 75%,
-    oklch(0.4 0.08 330 / 0.2) 100%
-  );
-
   --gradient-linear-sunset: linear-gradient(to bottom, #f8eed8 0%, #f1e0c9 50%, #c991a6 100%);
+
+  /* animation */
+  --animate-fade-in-delay-500: fade-in 0.8s ease-out 0.5s forwards;
+  --animate-fade-in-delay-1000: fade-in 0.8s ease-out 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @layer utilities {
-  .bg-gradient-radial {
-    background-image: var(--gradient-radial);
-  }
-
-  .bg-gradient-linear {
-    background-image: var(--gradient-linear);
-  }
-
   .bg-gradient-linear-sunset {
     background-image: var(--gradient-linear-sunset);
   }
 
-  .animate-slide-up {
-    animation: slide-up 300ms ease-out;
+  .animate-fade-in-delay-500 {
+    animation: var(--animate-fade-in-delay-500);
+    opacity: 0;
   }
 
-  @keyframes slide-up {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0%);
-    }
+  .animate-fade-in-delay-1000 {
+    animation: var(--animate-fade-in-delay-1000);
+    opacity: 0;
   }
 }
 
@@ -66,4 +52,43 @@
   html {
     font-family: var(--font-paperlogy);
   }
+}
+
+@font-face {
+  font-family: 'Paperlogy-ExtraBold';
+  src: url('./assets/font/Paperlogy/Paperlogy-8ExtraBold.ttf') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy-ExtraLight';
+  src: url('./assets/font/Paperlogy/Paperlogy-2ExtraLight.ttf') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('./assets/font/Pretendard/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('./assets/font/Pretendard/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('./assets/font/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
 }
