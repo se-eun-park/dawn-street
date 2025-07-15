@@ -17,11 +17,34 @@
 
   /* gradient */
   --gradient-linear-sunset: linear-gradient(to bottom, #f8eed8 0%, #f1e0c9 50%, #c991a6 100%);
+
+  /* animation */
+  --animate-fade-in-delay-500: fade-in 0.8s ease-out 0.5s forwards;
+  --animate-fade-in-delay-1000: fade-in 0.8s ease-out 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @layer utilities {
   .bg-gradient-linear-sunset {
     background-image: var(--gradient-linear-sunset);
+  }
+
+  .animate-fade-in-delay-500 {
+    animation: var(--animate-fade-in-delay-500);
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-1000 {
+    animation: var(--animate-fade-in-delay-1000);
+    opacity: 0;
   }
 }
 

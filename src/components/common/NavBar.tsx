@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Rogo } from '@/assets/svg'
 
 type NavBarProps = {
@@ -8,13 +9,21 @@ type NavBarProps = {
 }
 
 const NavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps) => {
+  const [isFirstRender, setIsFirstRender] = useState(true)
+
+  useEffect(() => {
+    setIsFirstRender(false)
+  }, [])
+
   const handleClick = (page: NavBarProps['nowPage']) => {
     setNowPage(page)
     setRefresh(refresh * -1)
   }
 
   return (
-    <nav className='fixed top-4 left-1/2 z-50 flex h-12 w-full -translate-x-1/2 items-center justify-center bg-transparent px-12 lg:w-[60vw]'>
+    <nav
+      className={`fixed top-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-12 w-full -translate-x-1/2 items-center justify-center bg-transparent px-12 transition-opacity duration-1000 lg:w-[60vw]`}
+    >
       <Rogo
         onClick={() => handleClick('main')}
         className='absolute left-12 w-8 cursor-pointer lg:left-0'
