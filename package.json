@@ -18,6 +18,7 @@
     "lottie-web": "^5.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-slick": "^0.30.3",
     "tailwindcss": "^4.1.7",
     "vite-plugin-svgr": "^4.3.0",
     "zustand": "^5.0.5"
@@ -28,6 +29,7 @@
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@types/react-slick": "^0.23.13",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "eslint": "^9.25.0",
     "eslint-config-prettier": "^10.1.5",
