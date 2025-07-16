@@ -10,11 +10,16 @@
   --font-pretendard-500: 'Pretendard-Medium';
   --font-pretendard-600: 'Pretendard-SemiBold';
 
+  /* aspect-ratio */
+  --aspect-ratio-16-8: 2;
+
   /* color */
   --color-bg-black: #09090b;
   --color-bg-black-100: #0e0f14;
   --color-bg-darkgray: #141620;
   --color-bg-darkgray-100: #1a1c26;
+
+  --color-border-gray: #797b85;
 
   --color-point-darkpurple: #404060;
 
