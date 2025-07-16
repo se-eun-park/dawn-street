@@ -35,7 +35,7 @@ const CountCard = ({ countRef, startCount, endCount, unit, title }: CountCardPro
         },
         scrollTrigger: {
           trigger: countRef.current,
-          start: 'top 50%',
+          start: 'top 60%',
           end: 'bottom 20%',
           toggleActions: 'play none none none',
         },
@@ -49,7 +49,7 @@ const CountCard = ({ countRef, startCount, endCount, unit, title }: CountCardPro
         ease: 'power2.out',
         scrollTrigger: {
           trigger: countRef.current,
-          start: 'top 50%',
+          start: 'top 60%',
           end: 'bottom 20%',
           toggleActions: 'play none none none',
         },
@@ -63,17 +63,17 @@ const CountCard = ({ countRef, startCount, endCount, unit, title }: CountCardPro
   }, [])
 
   return (
-    <div className='bg-bg-darkgray-100 flex aspect-video w-1/3 flex-col items-center justify-center gap-2 rounded-xl'>
+    <div className='bg-bg-darkgray-100 flex aspect-video w-52 flex-col items-center justify-center gap-2 rounded-xl sm:w-1/3'>
       <p className='text-gradient-linear-sunset-90deg flex items-center gap-2'>
         <span
           ref={countRef}
-          className='font-paperlogy-800 text-gradient-linear-sunset-90deg text-6xl tracking-wide'
+          className='font-paperlogy-800 text-gradient-linear-sunset-90deg text-3xl tracking-wide lg:text-5xl'
         >
           {startCount}
         </span>
-        <span className='font-paperlogy-800 text-6xl tracking-wide'>{unit}</span>
+        <span className='font-paperlogy-800 text-3xl tracking-wide lg:text-5xl'>{unit}</span>
       </p>
-      <span className='text-text-white font-pretendard-400 text-md'>{title}</span>
+      <span className='text-text-white font-pretendard-400 text-sm'>{title}</span>
     </div>
   )
 }
