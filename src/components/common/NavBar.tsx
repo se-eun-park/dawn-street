@@ -86,7 +86,7 @@ const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps)
     <>
       {/* 모바일 네비게이션 바 */}
       <nav
-        className={`fixed top-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-12 w-full -translate-x-1/2 items-center justify-between bg-transparent px-12 transition-opacity duration-1000`}
+        className={`fixed top-0 py-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-14 w-full -translate-x-1/2 items-center justify-between bg-black px-12 transition-opacity duration-1000`}
       >
         <Rogo onClick={() => handleClick('main')} className='w-8 cursor-pointer' />
 
@@ -106,7 +106,7 @@ const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps)
 
       {/* 모바일 드롭다운 메뉴 */}
       <div
-        className={`fixed top-16 left-1/2 z-40 w-full -translate-x-1/2 bg-black/80 backdrop-blur-sm transition-all duration-300 ${
+        className={`fixed top-14 left-1/2 z-40 w-full -translate-x-1/2 bg-black/80 backdrop-blur-sm transition-all duration-300 ${
           isMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
