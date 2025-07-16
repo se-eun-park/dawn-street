@@ -83,7 +83,7 @@ const MetricsPage = () => {
   }, [])
 
   return (
-    <section className='bg-bg-black-100 flex h-fit w-full flex-col items-center overflow-hidden px-12 pt-24'>
+    <section className='bg-bg-black-100 flex h-fit w-full flex-col items-center overflow-hidden px-12 py-24 sm:py-36'>
       <div className='w-full xl:max-w-[60vw]'>
         <div className='flex w-full flex-col items-start lg:ml-24'>
           <h1 ref={headerRef} className='flex flex-col items-start gap-1'>

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { Rogo } from '@/assets/svg'
 
 type NavBarProps = {
-  nowPage: 'main' | 'metrics' | 'service' | 'patents' | 'partnerships'
-  setNowPage: (page: 'main' | 'metrics' | 'service' | 'patents' | 'partnerships') => void
+  nowPage: 'main' | 'metrics' | 'service' | 'patents' | 'contact'
+  setNowPage: (page: 'main' | 'metrics' | 'service' | 'patents' | 'contact') => void
   refresh: number
   setRefresh: (refresh: number) => void
 }
@@ -23,11 +23,11 @@ const DesktopNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps
 
   return (
     <nav
-      className={`fixed top-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-12 w-full -translate-x-1/2 items-center justify-center bg-transparent px-12 transition-opacity duration-1000 lg:w-[60vw]`}
+      className={`fixed top-0 py-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-14 w-full -translate-x-1/2 items-center justify-center bg-transparent px-12 backdrop-blur-xl transition-opacity duration-1000`}
     >
       <Rogo
         onClick={() => handleClick('main')}
-        className='absolute left-12 w-8 cursor-pointer lg:left-0'
+        className='absolute left-12 w-8 cursor-pointer lg:left-[24vw]'
       />
 
       <div className='flex items-center gap-8'>
@@ -52,10 +52,10 @@ const DesktopNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps
           />
         </button>
 
-        <button onClick={() => handleClick('partnerships')} className='relative cursor-pointer'>
-          <span className='text-text-white font-pretendard-400 text-sm'>파트너쉽</span>
+        <button onClick={() => handleClick('contact')} className='relative cursor-pointer'>
+          <span className='text-text-white font-pretendard-400 text-sm'>연락처</span>
           <div
-            className={`bg-text-white absolute -bottom-1 left-1/2 aspect-square w-1 -translate-x-1/2 rounded-full transition-all duration-300 ${nowPage === 'partnerships' ? 'scale-y-100' : 'scale-y-0'}`}
+            className={`bg-text-white absolute -bottom-1 left-1/2 aspect-square w-1 -translate-x-1/2 rounded-full transition-all duration-300 ${nowPage === 'contact' ? 'scale-y-100' : 'scale-y-0'}`}
           />
         </button>
       </div>
@@ -64,7 +64,7 @@ const DesktopNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps
 }
 
 // 모바일 NavBar 컴포넌트
-const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps) => {
+const MobileNavBar = ({ setNowPage, refresh, setRefresh }: NavBarProps) => {
   const [isFirstRender, setIsFirstRender] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -86,7 +86,7 @@ const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps)
     <>
       {/* 모바일 네비게이션 바 */}
       <nav
-        className={`fixed top-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-12 w-full -translate-x-1/2 items-center justify-between bg-transparent px-12 transition-opacity duration-1000`}
+        className={`fixed top-0 py-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-14 w-full -translate-x-1/2 items-center justify-between bg-black px-12 transition-opacity duration-1000`}
       >
         <Rogo onClick={() => handleClick('main')} className='w-8 cursor-pointer' />
 
@@ -106,7 +106,7 @@ const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps)
 
       {/* 모바일 드롭다운 메뉴 */}
       <div
-        className={`fixed top-16 left-1/2 z-40 w-full -translate-x-1/2 bg-black/80 backdrop-blur-sm transition-all duration-300 ${
+        className={`fixed top-14 left-1/2 z-40 w-full -translate-x-1/2 bg-black/80 backdrop-blur-sm transition-all duration-300 ${
           isMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
@@ -133,10 +133,10 @@ const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps)
           </button>
 
           <button
-            onClick={() => handleClick('partnerships')}
-            className={`font-pretendard-400 py-3 text-left text-sm text-white ${nowPage === 'partnerships' ? 'text-blue-400' : ''}`}
+            onClick={() => handleClick('contact')}
+            className='font-pretendard-400 py-3 text-left text-sm text-white'
           >
-            파트너쉽
+            연락처
           </button>
         </div>
       </div>
