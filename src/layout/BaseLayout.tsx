@@ -2,9 +2,9 @@ import gsap from 'gsap'
 import { ReactLenis } from 'lenis/react'
 import { useEffect, useRef, useState } from 'react'
 import NavBar from '@/components/common/NavBar'
-import { MainPage, MetricsPage, ServicesPage, PartnershipsPage, PatentsPage } from '@/pages'
+import { MainPage, MetricsPage, ServicesPage, ContactPage, PatentsPage } from '@/pages'
 
-type PageProps = 'main' | 'metrics' | 'service' | 'patents' | 'partnerships'
+type PageProps = 'main' | 'metrics' | 'service' | 'patents' | 'contact'
 
 const BaseLayout = () => {
   const lenisRef = useRef<any>(null)
@@ -16,7 +16,7 @@ const BaseLayout = () => {
   const metricsRef = useRef<HTMLDivElement>(null)
   const servicesRef = useRef<HTMLDivElement>(null)
   const patentsRef = useRef<HTMLDivElement>(null)
-  const partnershipsRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
 
   // 페이지 ref 매핑 객체
   const pageRefs = {
@@ -24,7 +24,7 @@ const BaseLayout = () => {
     metrics: metricsRef,
     service: servicesRef,
     patents: patentsRef,
-    partnerships: partnershipsRef,
+    contact: contactRef,
   } as const
 
   useEffect(() => {
@@ -71,8 +71,8 @@ const BaseLayout = () => {
       <div ref={patentsRef}>
         <PatentsPage />
       </div>
-      <div ref={partnershipsRef}>
-        <PartnershipsPage />
+      <div ref={contactRef}>
+        <ContactPage />
       </div>
     </main>
   )
