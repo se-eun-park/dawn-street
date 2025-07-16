@@ -38,17 +38,17 @@ const DesktopNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps
           />
         </button>
 
+        <button onClick={() => handleClick('patents')} className='relative cursor-pointer'>
+          <span className='text-text-white font-pretendard-400 text-sm'>기술력</span>
+          <div
+            className={`bg-text-white absolute -bottom-1 left-1/2 aspect-square w-1 -translate-x-1/2 rounded-full transition-all duration-300 ${nowPage === 'patents' ? 'scale-y-100' : 'scale-y-0'}`}
+          />
+        </button>
+
         <button onClick={() => handleClick('service')} className='relative cursor-pointer'>
           <span className='text-text-white font-pretendard-400 text-sm'>서비스</span>
           <div
             className={`bg-text-white absolute -bottom-1 left-1/2 aspect-square w-1 -translate-x-1/2 rounded-full transition-all duration-300 ${nowPage === 'service' ? 'scale-y-100' : 'scale-y-0'}`}
-          />
-        </button>
-
-        <button onClick={() => handleClick('patents')} className='relative cursor-pointer'>
-          <span className='text-text-white font-pretendard-400 text-sm'>특허</span>
-          <div
-            className={`bg-text-white absolute -bottom-1 left-1/2 aspect-square w-1 -translate-x-1/2 rounded-full transition-all duration-300 ${nowPage === 'patents' ? 'scale-y-100' : 'scale-y-0'}`}
           />
         </button>
 
@@ -119,17 +119,17 @@ const MobileNavBar = ({ setNowPage, refresh, setRefresh }: NavBarProps) => {
           </button>
 
           <button
+            onClick={() => handleClick('patents')}
+            className='font-pretendard-400 border-b border-white/20 py-3 text-left text-sm text-white'
+          >
+            기술력
+          </button>
+
+          <button
             onClick={() => handleClick('service')}
             className='font-pretendard-400 border-b border-white/20 py-3 text-left text-sm text-white'
           >
             서비스
-          </button>
-
-          <button
-            onClick={() => handleClick('patents')}
-            className='font-pretendard-400 border-b border-white/20 py-3 text-left text-sm text-white'
-          >
-            특허
           </button>
 
           <button
