@@ -64,7 +64,7 @@ const DesktopNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps
 }
 
 // 모바일 NavBar 컴포넌트
-const MobileNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps) => {
+const MobileNavBar = ({ setNowPage, refresh, setRefresh }: NavBarProps) => {
   const [isFirstRender, setIsFirstRender] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 

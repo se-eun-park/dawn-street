@@ -63,7 +63,7 @@ const DesktopServicePageTitle = () => {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: descriptionRef.current,
-            start: 'top 60%',
+            start: 'top 50%',
             end: 'bottom 20%',
             toggleActions: 'play none none none',
           },
@@ -92,7 +92,7 @@ const DesktopServicePageTitle = () => {
         </p>
 
         <p ref={descriptionRef}>
-          <span className='text-text-white/70 font-pretendard-200 text-xl'>
+          <span className='text-text-white/70 font-paperlogy-300 text-xl'>
             블록체인으로 신뢰를,
             <br /> AI로 효율을,
             <br /> 디지털로 연결을 만듭니다.
@@ -183,7 +183,7 @@ const MobileServicePageTitle = () => {
         </p>
 
         <p ref={descriptionRef}>
-          <span className='text-text-white/70 font-pretendard-200 text-xs md:text-sm'>
+          <span className='text-text-white/70 font-paperlogy-300 text-xs md:text-sm'>
             블록체인으로 신뢰를,
             <br /> AI로 효율을,
             <br /> 디지털로 연결을 만듭니다.
