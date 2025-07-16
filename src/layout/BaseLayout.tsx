@@ -65,11 +65,11 @@ const BaseLayout = () => {
       <div ref={metricsRef}>
         <MetricsPage />
       </div>
-      <div ref={servicesRef}>
-        <ServicesPage />
-      </div>
       <div ref={patentsRef}>
         <PatentsPage />
+      </div>
+      <div ref={servicesRef}>
+        <ServicesPage />
       </div>
       <div ref={contactRef}>
         <ContactPage />
