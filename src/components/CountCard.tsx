@@ -24,6 +24,9 @@ const CountCard = ({ countRef, startCount, endCount, unit, title }: CountCardPro
       // 숫자 카운트업 애니메이션
       let obj = { count: startCount }
 
+      // 화면 크기에 따른 start 지점 결정
+      const startPosition = window.innerWidth <= 640 ? 'top 90%' : 'top 65%'
+
       gsap.to(obj, {
         count: endCount,
         duration: 1.5,
@@ -35,7 +38,7 @@ const CountCard = ({ countRef, startCount, endCount, unit, title }: CountCardPro
         },
         scrollTrigger: {
           trigger: countRef.current,
-          start: 'top 60%',
+          start: startPosition,
           end: 'bottom 20%',
           toggleActions: 'play none none none',
         },
@@ -49,7 +52,7 @@ const CountCard = ({ countRef, startCount, endCount, unit, title }: CountCardPro
         ease: 'power2.out',
         scrollTrigger: {
           trigger: countRef.current,
-          start: 'top 60%',
+          start: startPosition,
           end: 'bottom 20%',
           toggleActions: 'play none none none',
         },
