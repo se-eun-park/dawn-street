@@ -23,11 +23,11 @@ const DesktopNavBar = ({ nowPage, setNowPage, refresh, setRefresh }: NavBarProps
 
   return (
     <nav
-      className={`fixed top-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-12 w-full -translate-x-1/2 items-center justify-center bg-transparent px-12 transition-opacity duration-1000 lg:w-[60vw]`}
+      className={`fixed top-0 py-4 ${isFirstRender ? 'opacity-0' : 'opacity-100'} left-1/2 z-50 flex h-14 w-full -translate-x-1/2 items-center justify-center bg-transparent px-12 backdrop-blur-xl transition-opacity duration-1000`}
     >
       <Rogo
         onClick={() => handleClick('main')}
-        className='absolute left-12 w-8 cursor-pointer lg:left-0'
+        className='absolute left-12 w-8 cursor-pointer lg:left-[24vw]'
       />
 
       <div className='flex items-center gap-8'>
